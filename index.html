@@ -10,11 +10,14 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth; /* Enable smooth scrolling */
+      }
+    </style>
   </head>
   <body class="bg-gray-900 text-gray-100">
-    <!-------
-            -----Added Header And Sidebar---------
-                                            ---------------->
+    <!------- Header And Sidebar -------->
     <div class="flex min-h-screen">
       <!-- Sidebar Toggle -->
       <input type="checkbox" id="menu-toggle" class="hidden peer" />
@@ -32,37 +35,22 @@
         <h1 class="text-xl font-bold mb-6">Sales Management</h1>
         <ul class="space-y-4">
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">🏠 Dashboard</a>
+            <a href="#dashboard">📈 Dashboard</a>
           </li>
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">👤 Profile</a>
+            <a href="#leaderboard">📊 Leaderboard</a>
           </li>
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">📊 Leaderboard</a>
+            <a href="#order">🛒 Order</a>
           </li>
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">🛒 Order</a>
+            <a href="#sales">📑 Sales Report</a>
           </li>
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">📦 Product</a>
-          </li>
-          <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">📑 Sales Report</a>
-          </li>
-          <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">💬 Message</a>
+            <a href="#message">💬 Message</a>
           </li>
           <li class="p-2 rounded-md hover:bg-gray-700">
             <a href="#">⚙️ Settings</a>
-          </li>
-          <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">⭐ Favourite</a>
-          </li>
-          <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">📜 History</a>
-          </li>
-          <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#">🔐 Login</a>
           </li>
         </ul>
       </div>
@@ -83,22 +71,69 @@
             placeholder="Search here..."
             class="input input-bordered w-full max-w-xs"
           />
-          <div class="flex items-center space-x-4">
-            <button class="btn btn-ghost">🔔</button>
-            <div class="avatar">
-              <div class="w-10 rounded-full">
-                <img src="https://via.placeholder.com/40" alt="User" />
+
+          <div class="flex items-center gap-2 md:gap-5">
+            <div class="relative">
+              <button class="btn btn-ghost btn-circle text-2xl">🔔</button>
+              <!-- Notification Badge -->
+              <span
+                class="badge badge-error absolute -top-1 -right-1 text-white"
+                >5</span
+              >
+            </div>
+
+            <div class="dropdown dropdown-end">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost btn-circle avatar"
+              >
+                <div class="w-10 rounded-full">
+                  <img alt="User Avatar" src="assets/img/profile.jpg" />
+                </div>
               </div>
+
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Profile settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <h2 class="text-2xl font-semibold">Dashboard Overview</h2>
-        <p class="mt-2">Welcome to the admin panel!</p>
+
+        <!------- Ended Header And Sidebar -------->
+
+        <div>
+          <h2 class="text-2xl font-semibold">Dashboard Overview</h2>
+          <p class="mt-2">Welcome to the admin panel!</p>
+        </div>
+
+        <div id="leaderboard" class="py-10">
+          <h1 class="text-3xl font-semibold">📊 Leaderboard</h1>
+          <p>This is the leaderboard page.</p>
+        </div>
+        <div id="order" class="py-10">
+          <h1 class="text-3xl font-semibold">🛒 Order</h1>
+          <p>This is the order management page.</p>
+        </div>
+        <div id="sales" class="py-10">
+          <h1 class="text-3xl font-semibold">📑 Sales Report</h1>
+          <p>This is the sales report page.</p>
+        </div>
+        <div id="message" class="py-10">
+          <h1 class="text-3xl font-semibold">💬 Message</h1>
+          <p>This is the message page.</p>
+        </div>
       </div>
     </div>
-
-    <!-------
-            -----Ended Header And Sidebar---------
-                                            ---------------->
   </body>
 </html>
