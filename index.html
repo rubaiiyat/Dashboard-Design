@@ -30,7 +30,7 @@
 
       <!-- Sidebar -->
       <div
-        class="w-64 bg-gray-800 p-4 fixed inset-y-0 left-0 z-40 transform -translate-x-full peer-checked:translate-x-0 md:translate-x-0 transition-transform duration-300 ease-in-out"
+        class="w-64 bg-gray-900 p-4 fixed inset-y-0 left-0 z-40 transform -translate-x-full peer-checked:translate-x-0 md:translate-x-0 transition-transform duration-300 ease-in-out"
       >
         <h1 class="text-xl font-bold mb-6">Sales Management</h1>
         <ul class="space-y-4">
@@ -59,7 +59,7 @@
       <div class="flex-1 p-6 ml-0 transition-all md:ml-64">
         <!-- Top Navbar -->
         <div
-          class="flex items-center justify-between bg-gray-800 p-4 rounded-md mb-4"
+          class="flex items-center justify-between bg-gray-900 p-4 rounded-md mb-4"
         >
           <label
             for="menu-toggle"
@@ -69,7 +69,7 @@
           <input
             type="text"
             placeholder="Search here..."
-            class="input input-bordered w-full max-w-xs"
+            class="input input-bordered w-full max-w-xs bg-gray-800 mx-auto"
           />
 
           <div class="flex items-center gap-2 md:gap-5">
@@ -112,9 +112,41 @@
 
         <!------- Ended Header And Sidebar -------->
 
-        <div>
-          <h2 class="text-2xl font-semibold">Dashboard Overview</h2>
-          <p class="mt-2">Welcome to the admin panel!</p>
+        <div id="dashboard" class="py-10 bg-gray-800 p-10 rounded-xl">
+          <h1 class="text-3xl font-bold">Today’s Sales</h1>
+          <p class="font-bold mt-2 text-xl text-gray-400">Sales Summary</p>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5"
+          >
+            <div class="space-y-2 bg-gray-900 p-5 rounded-xl w-full">
+              <h1 class="text-2xl">💰</h1>
+              <h1 class="text-2xl font-bold">$10k</h1>
+              <h1 class="text-xl font-bold">Total Sales</h1>
+              <p class="text-yellow-500 text-xs">+10% from yesterday</p>
+            </div>
+
+            <div class="space-y-2 bg-gray-900 p-5 rounded-xl w-full">
+              <h1 class="text-2xl">🛍️</h1>
+              <h1 class="text-2xl font-bold">500</h1>
+              <h1 class="text-xl font-bold">Total Order</h1>
+              <p class="text-accent text-xs">+8% from yesterday</p>
+            </div>
+
+            <div class="space-y-2 bg-gray-900 p-5 rounded-xl w-full">
+              <h1 class="text-2xl">📦</h1>
+              <h1 class="text-2xl font-bold">9</h1>
+              <h1 class="text-xl font-bold">Product Sold</h1>
+              <p class="text-primary text-xs">+2% from yesterday</p>
+            </div>
+
+            <div class="space-y-2 bg-gray-900 p-5 rounded-xl w-full">
+              <h1 class="text-2xl">🧑</h1>
+              <h1 class="text-2xl font-bold">12</h1>
+              <h1 class="text-xl font-bold">New Customer</h1>
+              <p class="text-secondary text-xs">+3% from yesterday</p>
+            </div>
+          </div>
         </div>
 
         <div id="leaderboard" class="py-10">
