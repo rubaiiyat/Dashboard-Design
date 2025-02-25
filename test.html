@@ -7,101 +7,102 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-900 text-white">
-    <div class="bg-gray-900 p-6 rounded-xl shadow-lg text-white">
-      <h2 class="text-2xl font-bold mb-4">📊 Sales Report (Extended)</h2>
+    <div class="h-screen w-screen flex bg-gray-900 text-white">
+      <!-- Left Sidebar (Customer List) -->
+      <div
+        class="w-1/4 bg-gray-800 p-4 space-y-4 overflow-y-auto hidden md:block"
+      >
+        <h2 class="text-lg font-semibold mb-2">📩 Customer Messages</h2>
 
-      <!-- Top-Selling Categories -->
-      <div class="mt-6">
-        <h3 class="text-lg font-semibold">🔥 Top-Selling Categories</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-          <div class="bg-green-500 rounded-md h-24">
-            <p class="text-center text-white font-bold">Electronics</p>
+        <!-- Customer 1 -->
+        <div
+          class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-600"
+        >
+          <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+          <div class="flex-1">
+            <p class="font-semibold">John Doe</p>
+            <p class="text-xs text-gray-400 truncate">
+              Hey! I have a question...
+            </p>
           </div>
-          <div class="bg-blue-500 rounded-md h-32">
-            <p class="text-center text-white font-bold">Clothing</p>
+          <span class="text-xs text-gray-400">10:30 AM</span>
+        </div>
+
+        <!-- Customer 2 -->
+        <div
+          class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+        >
+          <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+          <div class="flex-1">
+            <p class="font-semibold">Emma Watson</p>
+            <p class="text-xs text-gray-400 truncate">Is my order shipped?</p>
           </div>
-          <div class="bg-yellow-500 rounded-md h-28">
-            <p class="text-center text-white font-bold">Home & Living</p>
+          <span class="text-xs text-gray-400">9:45 AM</span>
+        </div>
+
+        <!-- Customer 3 -->
+        <div
+          class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+        >
+          <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+          <div class="flex-1">
+            <p class="font-semibold">Michael Smith</p>
+            <p class="text-xs text-gray-400 truncate">Thanks for the update!</p>
           </div>
-          <div class="bg-red-500 rounded-md h-16">
-            <p class="text-center text-white font-bold">Beauty</p>
-          </div>
+          <span class="text-xs text-gray-400">8:15 AM</span>
         </div>
       </div>
 
-      <!-- Customer Location Analysis -->
-      <div class="mt-6">
-        <h3 class="text-lg font-semibold">🌍 Customer Location Breakdown</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-          <div class="bg-gray-800 p-4 rounded-lg text-center">
-            <h4 class="text-lg font-semibold text-blue-400">🇺🇸 USA</h4>
-            <p class="text-xl font-bold">45%</p>
+      <!-- Right Chat Area (Admin Chat) -->
+      <div class="w-full md:w-3/4 flex flex-col h-full">
+        <!-- Chat Header -->
+        <div class="bg-gray-800 p-4 flex justify-between items-center">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gray-500 rounded-full"></div>
+            <div>
+              <p class="font-semibold">John Doe</p>
+              <p class="text-xs text-gray-400">Online</p>
+            </div>
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg text-center">
-            <h4 class="text-lg font-semibold text-yellow-400">🇬🇧 UK</h4>
-            <p class="text-xl font-bold">25%</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg text-center">
-            <h4 class="text-lg font-semibold text-green-400">🇨🇦 Canada</h4>
-            <p class="text-xl font-bold">20%</p>
-          </div>
-          <div class="bg-gray-800 p-4 rounded-lg text-center">
-            <h4 class="text-lg font-semibold text-red-400">🌎 Others</h4>
-            <p class="text-xl font-bold">10%</p>
-          </div>
+          <button class="text-gray-400 hover:text-white">✖</button>
         </div>
-      </div>
 
-      <!-- Returning vs New Customers -->
-      <div class="mt-6">
-        <h3 class="text-lg font-semibold">👥 Customer Retention</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <div class="bg-gray-800 p-4 rounded-lg text-center">
-            <h4 class="text-lg font-semibold text-green-400">
-              Returning Customers
-            </h4>
-            <p class="text-2xl font-bold">65%</p>
+        <!-- Chat Messages Area -->
+        <div
+          class="flex-1 p-4 space-y-4 overflow-y-auto bg-gray-900 h-[calc(100vh-120px)]"
+        >
+          <!-- Customer Message -->
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 bg-gray-500 rounded-full"></div>
+            <div class="bg-gray-700 text-white p-3 rounded-lg max-w-[75%]">
+              <p>Hello! I need help with my order.</p>
+              <span class="text-xs text-gray-400">10:30 AM</span>
+            </div>
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg text-center">
-            <h4 class="text-lg font-semibold text-blue-400">New Customers</h4>
-            <p class="text-2xl font-bold">35%</p>
+
+          <!-- Admin Reply -->
+          <div class="flex items-end justify-end space-x-2">
+            <div class="bg-blue-500 text-white p-3 rounded-lg max-w-[75%]">
+              <p>Sure! Please provide your order ID.</p>
+              <span class="text-xs text-gray-200">10:32 AM</span>
+            </div>
+            <div class="w-8 h-8 bg-blue-600 rounded-full"></div>
           </div>
         </div>
-      </div>
 
-      <!-- Average Order Value -->
-      <div class="mt-6">
-        <h3 class="text-lg font-semibold">💰 Average Order Value (AOV)</h3>
-        <p class="text-2xl font-bold text-yellow-400">$42.75</p>
-        <p class="text-sm text-gray-400">
-          This represents the average amount spent per order.
-        </p>
-      </div>
-
-      <!-- Peak Sales Hours -->
-      <div class="mt-6">
-        <h3 class="text-lg font-semibold">🕒 Peak Sales Hours</h3>
-        <div class="grid grid-cols-2 md:grid-cols-7 gap-4 mt-4">
-          <div class="bg-blue-500 rounded-md h-8"></div>
-          <div class="bg-blue-500 rounded-md h-14"></div>
-          <div class="bg-blue-500 rounded-md h-20"></div>
-          <div class="bg-blue-500 rounded-md h-28"></div>
-          <div class="bg-blue-500 rounded-md h-32"></div>
-          <div class="bg-blue-500 rounded-md h-16"></div>
-          <div class="bg-blue-500 rounded-md h-24"></div>
+        <!-- Message Input -->
+        <div class="p-3 bg-gray-800 flex items-center">
+          <input
+            type="text"
+            placeholder="Type a message..."
+            class="flex-1 p-2 bg-gray-700 text-white rounded-lg focus:outline-none"
+          />
+          <button
+            class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          >
+            Send
+          </button>
         </div>
-        <div class="flex justify-between text-sm text-gray-400 mt-2">
-          <span>12 AM</span>
-          <span>6 AM</span>
-          <span>12 PM</span>
-          <span>3 PM</span>
-          <span>6 PM</span>
-          <span>9 PM</span>
-          <span>11 PM</span>
-        </div>
-        <p class="text-gray-400 text-sm mt-2">
-          🚀 Most sales happen between **3 PM - 6 PM**.
-        </p>
       </div>
     </div>
   </body>

@@ -49,9 +49,19 @@
             <a href="#leaderboard">📊 Leaderboard</a>
           </li>
 
-          <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#message">💬 Message</a>
+          <li
+            class="p-2 rounded-md hover:bg-gray-700 relative flex items-center"
+          >
+            <a href="#message" class="flex items-center space-x-2">
+              <span>💬 Message</span>
+              <span
+                class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full"
+              >
+                5+
+              </span>
+            </a>
           </li>
+
           <li class="p-2 rounded-md hover:bg-gray-700">
             <a href="#">⚙️ Settings</a>
           </li>
@@ -544,8 +554,226 @@
         </div>
 
         <div id="message" class="py-10">
-          <h1 class="text-3xl font-semibold">💬 Message</h1>
-          <p>This is the message page.</p>
+          <div class="flex h-screen bg-gray-900 text-white">
+            <!-- Left Sidebar (Customer List) -->
+            <div
+              class="w-1/4 bg-gray-800 p-4 space-y-4 overflow-y-auto hidden lg:block"
+            >
+              <h2 class="text-lg font-semibold mb-2">📩 Customer Messages</h2>
+
+              <!-- Customer 1 -->
+              <div
+                class="flex items-center space-x-3 p-2 bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">John Doe</p>
+                  <p class="text-xs text-gray-400 truncate">
+                    Hey! I have a question...
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">10:30 AM</span>
+              </div>
+
+              <!-- Customer 2 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">Emma Watson</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    Is my order shipped?
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">9:45 AM</span>
+              </div>
+
+              <!-- Customer 3 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">Michael Smith</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    Thanks for the update!
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">8:15 AM</span>
+              </div>
+
+              <!-- Customer 4 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">Alice Brown</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    Can I change my address?
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">7:45 AM</span>
+              </div>
+
+              <!-- Customer 5 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">Robert Green</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    Received a damaged item.
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">6:15 AM</span>
+              </div>
+
+              <!-- Customer 6 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">Laura Wilson</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    When will my refund process?
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">5:00 AM</span>
+              </div>
+
+              <!-- Customer 7 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">James Taylor</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    Question about my subscription.
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">4:20 AM</span>
+              </div>
+
+              <!-- Customer 8 -->
+              <div
+                class="flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-gray-600"
+              >
+                <div class="w-12 h-12 bg-gray-500 rounded-full"></div>
+                <div class="flex-1">
+                  <p class="font-semibold hidden md:block">Olivia Johnson</p>
+                  <p class="text-xs text-gray-100 font-bold truncate">
+                    Need help with billing.
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400 md:hidden">3:00 AM</span>
+              </div>
+            </div>
+
+            <!-- Right Chat Area (Admin Chat) -->
+            <div class="flex-1 flex flex-col h-screen">
+              <!-- Chat Header -->
+              <div class="bg-gray-800 p-4 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 bg-gray-500 rounded-full"></div>
+                  <div>
+                    <p class="font-semibold">John Doe</p>
+                    <p class="text-xs text-gray-400">Online</p>
+                  </div>
+                </div>
+                <button class="text-gray-400 hover:text-white">✖</button>
+              </div>
+
+              <!-- Chat Messages Area -->
+              <div class="flex-1 p-4 space-y-4 overflow-y-auto bg-gray-900">
+                <!-- Customer Message 1 -->
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-gray-500 rounded-full"></div>
+                  <div
+                    class="bg-gray-700 text-white p-3 rounded-lg max-w-[75%]"
+                  >
+                    <p>Hello! I need help with my order.</p>
+                    <span class="text-xs text-gray-400">10:30 AM</span>
+                  </div>
+                </div>
+
+                <!-- Admin Reply 1 -->
+                <div class="flex items-end justify-end space-x-2">
+                  <div
+                    class="bg-blue-500 text-white p-3 rounded-lg max-w-[75%]"
+                  >
+                    <p>Sure! Please provide your order ID.</p>
+                    <span class="text-xs text-gray-200">10:32 AM</span>
+                  </div>
+                  <div class="w-8 h-8 bg-blue-600 rounded-full"></div>
+                </div>
+
+                <!-- Customer Message 2 -->
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-gray-500 rounded-full"></div>
+                  <div
+                    class="bg-gray-700 text-white p-3 rounded-lg max-w-[75%]"
+                  >
+                    <p>Is my order shipped?</p>
+                    <span class="text-xs text-gray-400">9:45 AM</span>
+                  </div>
+                </div>
+
+                <!-- Admin Reply 2 -->
+                <div class="flex items-end justify-end space-x-2">
+                  <div
+                    class="bg-blue-500 text-white p-3 rounded-lg max-w-[75%]"
+                  >
+                    <p>Your order is on the way!</p>
+                    <span class="text-xs text-gray-200">9:47 AM</span>
+                  </div>
+                  <div class="w-8 h-8 bg-blue-600 rounded-full"></div>
+                </div>
+
+                <!-- Customer Message 3 -->
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-gray-500 rounded-full"></div>
+                  <div
+                    class="bg-gray-700 text-white p-3 rounded-lg max-w-[75%]"
+                  >
+                    <p>Thanks for the update!</p>
+                    <span class="text-xs text-gray-400">8:15 AM</span>
+                  </div>
+                </div>
+
+                <!-- Admin Reply 3 -->
+                <div class="flex items-end justify-end space-x-2">
+                  <div
+                    class="bg-blue-500 text-white p-3 rounded-lg max-w-[75%]"
+                  >
+                    <p>
+                      You're welcome! Let me know if you need anything else.
+                    </p>
+                    <span class="text-xs text-gray-200">8:16 AM</span>
+                  </div>
+                  <div class="w-8 h-8 bg-blue-600 rounded-full"></div>
+                </div>
+              </div>
+
+              <!-- Message Input -->
+              <div class="p-3 bg-gray-800 flex items-center">
+                <input
+                  type="text"
+                  placeholder="Type a message..."
+                  class="flex-1 p-2 bg-gray-700 text-white rounded-lg focus:outline-none"
+                />
+                <button
+                  class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
