@@ -37,15 +37,18 @@
           <li class="p-2 rounded-md hover:bg-gray-700">
             <a href="#dashboard">📈 Dashboard</a>
           </li>
+
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#leaderboard">📊 Leaderboard</a>
+            <a href="#sales">📑 Sales Report</a>
           </li>
           <li class="p-2 rounded-md hover:bg-gray-700">
             <a href="#order">🛒 Order</a>
           </li>
+
           <li class="p-2 rounded-md hover:bg-gray-700">
-            <a href="#sales">📑 Sales Report</a>
+            <a href="#leaderboard">📊 Leaderboard</a>
           </li>
+
           <li class="p-2 rounded-md hover:bg-gray-700">
             <a href="#message">💬 Message</a>
           </li>
@@ -218,7 +221,7 @@
             <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg w-full">
               <h2 class="text-lg font-semibold">Earnings</h2>
               <p class="text-gray-400 text-sm">Total Expense</p>
-              <p class="text-4xl font-bold text-teal-400 mt-1">$6078.76</p>
+              <p class="text-4xl font-bold text-teal-400 mt-1">$67798.76</p>
               <p class="text-gray-400 mt-1">
                 Profit is
                 <span class="text-teal-400 font-semibold">48%</span> more than
@@ -241,6 +244,199 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div id="sales" class="py-10">
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-semibold mb-4">Customer Demographics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Radial Progress Chart for Age Group -->
+              <div class="text-center">
+                <h3 class="text-gray-400 mb-2">Age Group</h3>
+                <div class="relative w-32 h-32 mx-auto">
+                  <!-- Outer Circle -->
+                  <div
+                    class="absolute w-full h-full rounded-full border-4 border-gray-700"
+                  ></div>
+                  <!-- Inner Progress -->
+                  <div
+                    class="absolute w-full h-full rounded-full border-4 border-blue-500 clip-half"
+                  ></div>
+                  <!-- Text -->
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <span class="text-lg font-bold">60%</span>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">18-34 years</p>
+              </div>
+
+              <!-- Donut Chart for Gender Distribution -->
+              <div class="text-center">
+                <h3 class="text-gray-400 mb-2">Gender</h3>
+                <div class="relative w-32 h-32 mx-auto">
+                  <!-- Outer Circle -->
+                  <div
+                    class="absolute w-full h-full rounded-full border-4 border-gray-700"
+                  ></div>
+                  <!-- Female Segment -->
+                  <div
+                    class="absolute w-full h-full rounded-full border-4 border-purple-500 clip-45"
+                  ></div>
+                  <!-- Male Segment -->
+                  <div
+                    class="absolute w-full h-full rounded-full border-4 border-green-500 clip-135"
+                  ></div>
+                  <!-- Text -->
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <span class="text-lg font-bold">45%</span>
+                  </div>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Female: 45%, Male: 55%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Location Analysis -->
+          <div class="mt-6">
+            <h3 class="text-lg font-semibold">
+              🌍 Customer Location Breakdown
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+              <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <h4 class="text-lg font-semibold text-blue-400">USA</h4>
+                <p class="text-xl font-bold">45%</p>
+              </div>
+              <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <h4 class="text-lg font-semibold text-yellow-400">UK</h4>
+                <p class="text-xl font-bold">25%</p>
+              </div>
+              <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <h4 class="text-lg font-semibold text-green-400">Canada</h4>
+                <p class="text-xl font-bold">20%</p>
+              </div>
+              <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <h4 class="text-lg font-semibold text-red-400">🌎 Others</h4>
+                <p class="text-xl font-bold">10%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Returning vs New Customers -->
+          <div class="mt-6">
+            <h3 class="text-lg font-semibold">👥 Customer Retention</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <h4 class="text-lg font-semibold text-green-400">
+                  Returning Customers
+                </h4>
+                <p class="text-2xl font-bold">65%</p>
+              </div>
+              <div class="bg-gray-800 p-4 rounded-lg text-center">
+                <h4 class="text-lg font-semibold text-blue-400">
+                  New Customers
+                </h4>
+                <p class="text-2xl font-bold">35%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Average Order Value -->
+          <div class="mt-6 flex flex-col justify-center items-center">
+            <h3 class="text-lg font-semibold">💰 Average Order Value (AOV)</h3>
+            <p class="text-2xl font-bold text-yellow-400">$42.75</p>
+            <p class="text-sm text-gray-400">
+              This represents the average amount spent per order.
+            </p>
+          </div>
+        </div>
+        <div id="order" class="py-10">
+          <h1 class="text-2xl font-bold mt-5 mb-5">Order Management</h1>
+          <div class="w-full overflow-x-auto bg-gray-800 rounded-xl p-4">
+            <table class="table w-full">
+              <!-- Table Head -->
+              <thead>
+                <tr class="text-white text-sm md:text-lg">
+                  <th class="p-3 text-left">Order Info</th>
+                  <th class="p-3 text-left">Product Details</th>
+                  <th class="p-3 text-left">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row 1 -->
+                <tr class="text-white border-b border-gray-700">
+                  <td class="p-3 text-sm md:text-base">
+                    <span>#12345</span><br />
+                    <span>+1 234 567 8900</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base">
+                    <span>Wireless Bluetooth Headphones</span><br />
+                    <span>$29.99</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base text-green-500">
+                    Delivered
+                  </td>
+                </tr>
+                <!-- Row 2 -->
+                <tr class="text-white border-b border-gray-700">
+                  <td class="p-3 text-sm md:text-base">
+                    <span>#12346</span><br />
+                    <span>+1 234 567 8901</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base">
+                    <span>Smartphone Case</span><br />
+                    <span>$19.99</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base text-yellow-400">
+                    Pending
+                  </td>
+                </tr>
+                <!-- Row 3 -->
+                <tr class="text-white border-b border-gray-700">
+                  <td class="p-3 text-sm md:text-base">
+                    <span>#12347</span><br />
+                    <span>+1 234 567 8902</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base">
+                    <span>4K Ultra HD Smart TV</span><br />
+                    <span>$39.99</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base text-info">In Process</td>
+                </tr>
+                <!-- Row 4 -->
+                <tr class="text-white border-b border-gray-700">
+                  <td class="p-3 text-sm md:text-base">
+                    <span>#12348</span><br />
+                    <span>+1 234 567 8903</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base">
+                    <span>Gaming Mouse</span><br />
+                    <span>$49.99</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base text-green-500">
+                    Delivered
+                  </td>
+                </tr>
+                <!-- Row 5 -->
+                <tr class="text-white">
+                  <td class="p-3 text-sm md:text-base">
+                    <span>#12349</span><br />
+                    <span>+1 234 567 8904</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base">
+                    <span>Portable Charger</span><br />
+                    <span>$59.99</span>
+                  </td>
+                  <td class="p-3 text-sm md:text-base text-red-500">
+                    Cancelled
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -347,95 +543,6 @@
           </div>
         </div>
 
-        <div id="order" class="py-10">
-          <h1 class="text-2xl font-bold mt-5 mb-5">Order Management</h1>
-          <div class="w-full overflow-x-auto bg-gray-800 rounded-xl p-4">
-            <table class="table w-full">
-              <!-- Table Head -->
-              <thead>
-                <tr class="text-white text-sm md:text-lg">
-                  <th class="p-3 text-left">Order Info</th>
-                  <th class="p-3 text-left">Product Details</th>
-                  <th class="p-3 text-left">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Row 1 -->
-                <tr class="text-white border-b border-gray-700">
-                  <td class="p-3 text-sm md:text-base">
-                    <span>#12345</span><br />
-                    <span>+1 234 567 8900</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base">
-                    <span>Wireless Bluetooth Headphones</span><br />
-                    <span>$29.99</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base text-green-500">
-                    Delivered
-                  </td>
-                </tr>
-                <!-- Row 2 -->
-                <tr class="text-white border-b border-gray-700">
-                  <td class="p-3 text-sm md:text-base">
-                    <span>#12346</span><br />
-                    <span>+1 234 567 8901</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base">
-                    <span>Smartphone Case</span><br />
-                    <span>$19.99</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base text-yellow-400">
-                    Pending
-                  </td>
-                </tr>
-                <!-- Row 3 -->
-                <tr class="text-white border-b border-gray-700">
-                  <td class="p-3 text-sm md:text-base">
-                    <span>#12347</span><br />
-                    <span>+1 234 567 8902</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base">
-                    <span>4K Ultra HD Smart TV</span><br />
-                    <span>$39.99</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base text-info">In Process</td>
-                </tr>
-                <!-- Row 4 -->
-                <tr class="text-white border-b border-gray-700">
-                  <td class="p-3 text-sm md:text-base">
-                    <span>#12348</span><br />
-                    <span>+1 234 567 8903</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base">
-                    <span>Gaming Mouse</span><br />
-                    <span>$49.99</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base text-green-500">
-                    Delivered
-                  </td>
-                </tr>
-                <!-- Row 5 -->
-                <tr class="text-white">
-                  <td class="p-3 text-sm md:text-base">
-                    <span>#12349</span><br />
-                    <span>+1 234 567 8904</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base">
-                    <span>Portable Charger</span><br />
-                    <span>$59.99</span>
-                  </td>
-                  <td class="p-3 text-sm md:text-base text-red-500">
-                    Cancelled
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div id="sales" class="py-10">
-          <h1 class="text-3xl font-semibold">📑 Sales Report</h1>
-          <p>This is the sales report page.</p>
-        </div>
         <div id="message" class="py-10">
           <h1 class="text-3xl font-semibold">💬 Message</h1>
           <p>This is the message page.</p>
